@@ -1,0 +1,14 @@
+#connect to database
+conn = sqlite3.connect('chat.db')
+
+c = conn.cursor()
+
+#Create a Table
+c.execute("INSERT INTO chats VALUES ('2','Kofi','briggs','305') " )
+
+
+print("Command succesfully...")
+
+# commit and close changes
+conn.commit()
+conn.close()
